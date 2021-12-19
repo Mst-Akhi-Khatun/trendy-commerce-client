@@ -1,4 +1,4 @@
-# Admin Email: admin@example.com Password: admin@123456
+### Admin Email: admin@example.com Password: admin@123456
 
 # Trendy Commerce Shop
 
