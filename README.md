@@ -1,15 +1,17 @@
-# Lip Care Lipsticks Shop
+# Admin Email: admin@example.com Password: admin@123456
 
-### This site is about a cosmetics shop who only sells lipsticks. A user can buy her choice full lipsticks by this site from her home.There are various kinds and colors of lipsticks here.
+# Trendy Commerce Shop
 
-To visit the client side [Click here](https://lip-care.web.app/).
+### This site is about a e-commerce site. A user can buy her choice full products by this site from her home.There are various kinds and colors of products here.
+
+To visit the client side [Click here](https://trendy-commerce.web.app/).
 
 To visit the server side: [Click here](https://evening-island-64478.herokuapp.com/).
 
 ## Site Descriptions:
 
 <ul>
-    <li>This is an lipsticks selling site</li>
+    <li>This is an product selling site</li>
     <li>I made this site with react js</li>
     <li>I use firebase for user authentication</li>
     <li>I use mongodb as a no-sql database</li>
