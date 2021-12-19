@@ -77,7 +77,7 @@ const useFirebase = () => {
 
     const storeUser = (email, displayName) => {
         const user = { email, displayName }
-        fetch('https://lip-care-server.herokuapp.com/user', {
+        fetch('https://evening-island-64478.herokuapp.com/user', {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(user)
@@ -87,7 +87,7 @@ const useFirebase = () => {
     }
     // check admin
     useEffect(() => {
-        fetch(`https://lip-care-server.herokuapp.com/saveUser/${user?.email}`)
+        fetch(`https://evening-island-64478.herokuapp.com/saveUser/${user?.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user?.email])

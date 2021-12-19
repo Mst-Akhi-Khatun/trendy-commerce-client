@@ -6,7 +6,7 @@ const MakeAdmin = () => {
 
     const onSubmit = data => {
         const email = data.email;
-        fetch(`https://lip-care-server.herokuapp.com/addAdmin/${email}`, {
+        fetch(`https://evening-island-64478.herokuapp.com/addAdmin/${email}`, {
             method: "PUT",
             headers: { "content-type": "application/json" },
         })

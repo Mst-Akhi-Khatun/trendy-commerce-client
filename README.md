@@ -4,7 +4,7 @@
 
 To visit the client side [Click here](https://lip-care.web.app/).
 
-To visit the server side: [Click here](https://lip-care-server.herokuapp.com/).
+To visit the server side: [Click here](https://evening-island-64478.herokuapp.com/).
 
 ## Site Descriptions:
 

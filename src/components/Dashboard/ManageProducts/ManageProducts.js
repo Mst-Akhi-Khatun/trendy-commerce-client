@@ -9,7 +9,7 @@ const ManageProducts = () => {
     const removeItem = (id) => {
         const proceed = window.confirm('Are you sure you want to remove?')
         if (proceed) {
-            fetch(`https://lip-care-server.herokuapp.com/removeItem/${id}`, {
+            fetch(`https://evening-island-64478.herokuapp.com/removeItem/${id}`, {
                 method: 'DELETE',
                 headers: { 'content-type': 'application/json' }
             })

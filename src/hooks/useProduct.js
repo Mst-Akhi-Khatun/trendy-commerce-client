@@ -1,14 +1,40 @@
-import { useEffect, useState } from "react"
 
-const useProduct = () => {
-    const [items, setItems] = useState([]);
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { setProducts } from "../components/Redux/Actions/productActions";
+
+
+const useProducts = () => {
+    const [product, setProduct] = useState([]);
+
+    const products = useSelector(state => state)
+    const dispatch = useDispatch()
+
+    const fetchProducts = async () => {
+        const response = await axios
+            .get('https://evening-island-64478.herokuapp.com/products')
+            .catch(err => {
+                console.log("Error", err.message);
+            })
+        dispatch(setProducts(response?.data));
+    }
+
+    const reload = () => {
+        if (!product.length) {
+            fetchProducts()
+        }
+    }
+
     useEffect(() => {
-        fetch('https://lip-care-server.herokuapp.com/products')
-            .then(res => res.json())
-            .then(data => setItems(data))
-    }, [])
+        fetchProducts()
+        setProduct((products?.allProducts?.products))
+    }, [reload])
 
-    return [items, setItems];
+
+
+    return [product, setProduct]
 }
 
-export default useProduct;
+
+export default useProducts;

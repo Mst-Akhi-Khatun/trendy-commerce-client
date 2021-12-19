@@ -19,7 +19,7 @@ const Menubar = () => {
                         alt="React Bootstrap logo"
                     />
                 </Navbar.Brand>
-                <Navbar.Brand href="/" className="pink-text">LIP CARE</Navbar.Brand>
+                <Navbar.Brand href="/" className="pink-text">Trendy Commerce</Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto menu-item">

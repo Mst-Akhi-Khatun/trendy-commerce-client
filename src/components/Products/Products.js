@@ -8,21 +8,23 @@ const Products = () => {
     const [items, setItems] = useProduct();
 
     return (
-        <div className="container-fluid px-3 my-5">
-            <h1 className="text-uppercase mb-5"><span className="pink-text">Lipsticks</span> We Provide</h1>
-            {items?.length ? <div className="row row-cols-1 mb-5 row-cols-md-3 g-5">
+        <div className="container px-3 my-5">
+            <h1 className="text-uppercase mb-5"><span className="pink-text">Products</span> We Provide</h1>
+            {items?.length ? <div className="row row-cols-1 mb-5 row-cols-md-3 gy-5">
 
                 {
-                    items.slice(0, 6).map(item =>
+                    items.slice(9, 21).map(item =>
                         <div className="col" key={item._id}>
                             <div className="card h-100 d-flex align-items-center p-3">
-                                <img src={item?.img} className="card-img-top" width="50px" height="170px" alt="..." />
+                                <img src={item?.image} className="card-img-top" width="50px" height="200px" alt="..." />
                                 <div className="card-body text-center">
-                                    <h5 className="card-title pink-text">{item?.name}</h5>
-                                    <p className="card-text text-secondary" style={{ textAlign: "justify" }}> {item?.description}</p>
+                                    <h6 className="card-title pink-text">{item?.title}</h6>
+                                    <h6 className="card-title">Category: {item?.category}</h6>
+                                    <p className="card-text text-secondary text-center"> {item?.description.slice(0, 60)}</p>
+                                    <p className="card-text text-secondary text-center"> Ratings: {item?.rating?.rate} ({item?.rating?.count})</p>
                                     <h5 className="card-text pink-text">Price: ${item?.price}</h5>
                                     <Link to={`/order/${item?._id}`}>
-                                        <button className="pink-btn mt-2">Order Now</button>
+                                        <button className="pink-btn mt-2 w-100">Order Now</button>
                                     </Link>
                                 </div>
                             </div>

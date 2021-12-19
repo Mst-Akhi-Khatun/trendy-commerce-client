@@ -7,7 +7,7 @@ const Footer = () => {
 
                 <div className="col-md-4">
                     <h4>
-                        <span className="pink-text">Lip</span> Care
+                        <span className="pink-text">Trendy</span> Commerce
                     </h4>
                     <h6 className="fw-normal">AR Plaza,Dhaka, Bangladesh..</h6>
                     <h6 className="fw-normal">Mail: abc@gmail.com</h6>
@@ -41,7 +41,7 @@ const Footer = () => {
             <hr />
 
             <footer>
-                <p className="text-white text-center">&copy; Lip Care All Rights Reserved</p>
+                <p className="text-white text-center">&copy; Trendy Commerce All Rights Reserved</p>
             </footer>
         </div>
     );

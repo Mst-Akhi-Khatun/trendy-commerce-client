@@ -8,7 +8,7 @@ const MyOrders = () => {
     const { user } = useAuth()
 
     useEffect(() => {
-        fetch(`https://lip-care-server.herokuapp.com/myOrders/${user?.email}`)
+        fetch(`https://evening-island-64478.herokuapp.com/myOrders/${user?.email}`)
             .then(res => res.json())
             .then(data => setMyOrders(data))
     }, [remove])
@@ -17,7 +17,7 @@ const MyOrders = () => {
     const handleRemove = (id) => {
         const proceed = window.confirm("Are you sure to remove order?");
         if (proceed) {
-            fetch(`https://lip-care-server.herokuapp.com/removeOrder/${id}`, {
+            fetch(`https://evening-island-64478.herokuapp.com/removeOrder/${id}`, {
                 method: 'DELETE',
                 headers: { 'Content-Type': 'application/json' }
             })
@@ -34,13 +34,13 @@ const MyOrders = () => {
 
     return (
         <div className="container my-5" style={{ minHeight: "200px" }}>
-            <h1 className="pink-text">My All Ordered Lipsticks</h1>
+            <h1 className="pink-text">My All Ordered Products</h1>
             {myOrders.length}
             <Row xs={1} md={3} className=" my-3">
                 {myOrders.map(order => (
                     <Col>
                         <Card>
-                            <Card.Img variant="top" src={order?.img} height="200px" />
+                            <Card.Img variant="top" src={order?.image} height="200px" />
                             <Card.Body>
                                 <Card.Title className="fs-6 pink-text">{order?.productName}</Card.Title>
                                 <Card.Text>

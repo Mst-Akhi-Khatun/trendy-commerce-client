@@ -11,7 +11,7 @@ const OrderForm = () => {
     const [item, setItem] = useState({})
 
     useEffect(() => {
-        fetch(`https://lip-care-server.herokuapp.com/product/${id}`)
+        fetch(`https://evening-island-64478.herokuapp.com/product/${id}`)
             .then(res => res.json())
             .then(data => {
                 setItem(data)
@@ -23,8 +23,8 @@ const OrderForm = () => {
     const onSubmit = data => {
         data.status = "Pending"
         data.price = item?.price;
-        data.img = item?.img;
-        fetch("https://lip-care-server.herokuapp.com/order", {
+        data.image = item?.image;
+        fetch("https://evening-island-64478.herokuapp.com/order", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)
@@ -45,13 +45,16 @@ const OrderForm = () => {
                 <div className="col-md-3"></div>
                 <div className="col-md-6">
                     <Card className="bg-dark text-white">
-                        <Card.Img src={item?.img} alt="Card image" className="w-100" height="400px" style={{ opacity: 0.5 }} />
+                        <Card.Img src={item?.image} alt="Card image" className="w-100" height="400px" style={{ opacity: 0.5 }} />
                         <Card.ImgOverlay>
-                            <Card.Title className="text-white fs-2 mt-5">{item?.name}</Card.Title>
+                            <Card.Title className="text-white fs-2 mt-5">{item?.title}</Card.Title>
                             <Card.Text className="text-white fs-5 w-75 mx-auto">
-                                {item?.description}
+                                {item?.description?.slice(0, 200)}
                             </Card.Text>
-                            <Card.Text className="text-white fs-3 fw-bold">
+                            <Card.Text className="text-white fs-6 fw-bold">
+                                Ratings: {item?.rating?.rate} ({item?.rating?.count})
+                            </Card.Text>
+                            <Card.Text className="text-white fs-4 fw-bold">
                                 Price: $ {item?.price}
                             </Card.Text>
                         </Card.ImgOverlay>
@@ -87,8 +90,8 @@ const OrderForm = () => {
                             className="form-control my-3 "
                             placeholder="Phone"
                         />
-                        {item?.name && <input
-                            defaultValue={item?.name}
+                        {item?.title && <input
+                            defaultValue={item?.title}
                             {...register("productName", { required: true })}
                             className="form-control my-3 "
                             placeholder="Item Name"

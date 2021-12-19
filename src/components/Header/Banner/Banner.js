@@ -9,18 +9,17 @@ const Banner = () => {
             <div className="row d-flex align-items-center text-uppercase px-5">
                 <div className="col-md-7 text-start ps-5">
                     <h2>WELCOME TO</h2>
-                    <h1 className="fw-bolder"> Lip  <span className="pink-text"> Care</span> Lipstick Shop</h1>
-                    <p className="fs-6 w-75">We deliver high-quality, organic beauty and cosmetic products. All our products are rich in nutrients and it give a delicious aroma.</p>
+                    <h1 className="fw-bolder"> Trendy  <span className="pink-text"> Commerce</span> Shop</h1>
+                    <p className="fs-6 w-75">We deliver high-quality, organic digital products. All our products are rich in nutrients and it give a delicious aroma.</p>
                     <Link to="/exploreProducts">
-                        <button className="pink-btn">Explore</button>
+                        <button className="pink-btn px-5">Explore</button>
                     </Link>
                 </div>
                 <div className="col-md-5">
-                    <div className="pink-bg py-3 px-0 rounded-circle mt-5">
-                        <img src={banner} alt="" className="img-fluid" />
+                    <div className="mt-2">
+                        <img src={banner} alt="" className="img-fluid pb-4" />
                     </div>
                 </div>
-
             </div>
         </div>
     );

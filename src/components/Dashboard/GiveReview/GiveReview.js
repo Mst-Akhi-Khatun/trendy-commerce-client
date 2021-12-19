@@ -6,7 +6,7 @@ const GiveReview = () => {
     const { user } = useAuth()
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        fetch("https://lip-care-server.herokuapp.com/review", {
+        fetch("https://evening-island-64478.herokuapp.com/review", {
             method: "POST",
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(data)

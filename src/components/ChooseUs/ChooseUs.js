@@ -8,7 +8,7 @@ const ChooseUs = () => {
                 <img src={image} className="img-fluid w-75" alt="" />
             </div>
             <div className="col-md-6 text-start">
-                <h1 className="text-uppercase mb-3">Why Choose <span className="pink-text">Lip Care ?</span></h1>
+                <h2 className="text-uppercase mb-3">Why Choose <span className="pink-text">Trendy Commerce?</span></h2>
 
                 <h4>Professional and Certified</h4>
                 <p style={{ textAlign: 'justify' }}>
