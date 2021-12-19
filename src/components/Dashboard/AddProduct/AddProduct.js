@@ -26,7 +26,7 @@ const AddProduct = () => {
                     <form onSubmit={handleSubmit(onSubmit)} className="mt-3">
                         <input
                             type="text"
-                            {...register("name", { required: true })}
+                            {...register("title", { required: true })}
                             className="form-control my-3 "
                             placeholder="Product Name"
                         />
@@ -44,7 +44,7 @@ const AddProduct = () => {
                         />
                         <input
                             type="url"
-                            {...register("img", { required: true })}
+                            {...register("image", { required: true })}
                             className="form-control my-3 "
                             placeholder="Image url link"
                         />

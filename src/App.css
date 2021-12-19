@@ -3,13 +3,13 @@
   overflow: hidden;
 }
 .pink-text {
-  color: #e54583;
+  color: #45e59a;
 }
 .light-pink-text {
-  color: #f5abc8;
+  color: #66ecae;
 }
 .pink-btn {
-  background-color: #e54583;
+  background-color: #45e59a;
   border: none;
   outline: none;
   border-radius: 50px;
@@ -17,9 +17,9 @@
   padding: 8px 25px;
 }
 .pink-bg {
-  background-color: #e54583;
+  background-color: #45e59a;
 }
 
 .light-pink-bg {
-  background-color: #ec518c2c;
+  background-color: #bef2d9;
 }
